@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Multi-Step Form</string>
+    <string name="app_name">Multi-Step Card Form</string>
+
+    <string name="card_form_back">Back</string>
+    <string name="card_form_next">Next</string>
+    <string name="card_form_finish">Finish</string>
+
+    <string name="card_number">Card number</string>
+    <string name="card_number_hint">1234 5678 9012 3456</string>
+    <string name="card_number_empty_error">Empty card number</string>
+    <string name="card_number_invalid_error">Invalid card number</string>
+    <string name="card_number_helper">"For example:\n- American Express\t3714 4963 5398 431\n- Visa\t4871 0499 9999 9910\n- Visa\t4111 1111 1111 1111\n- Mastercard\t5454 5454 5454 5454\n"</string>
+
+    <string name="expiry_date">Expiry date</string>
+    <string name="expiry_date_format_hint">MM/AA</string>
+    <string name="expiry_date_empty_error">Empty expiry date</string>
+    <string name="expiry_date_expired_error">Expired card</string>
+    <string name="expiry_date_invalid_format">Invalid date</string>
+    <string name="expiry_date_invalid_month">Invalid month</string>
+
+    <string name="security_code">Security code</string>
+    <string name="security_code_cvv">CVV</string>
+    <string name="security_code_hint">@string/security_code_cvv</string>
+    <string name="security_code_empty_error">Empty security code</string>
+    <string name="security_code_invalid_length_error">Invalid length</string>
 </resources>

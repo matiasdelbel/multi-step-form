@@ -1,79 +1,42 @@
-# 🧾 Android Multi-Step Form with Jetpack Compose
-A simple multi-step form built with Jetpack Compose and modern Android architecture practices.  
-Designed to demonstrate clean state management, Compose navigation, and UI animations between steps.
+# 💳 Android Multi-Step Form with Jetpack Compose
+A polished multi-step form built using **Jetpack Compose**, following best practices in modern 
+Android development. This project demonstrates smooth screen transitions, robust state handling, 
+and modular validation — ideal for form-heavy user flows such as onboarding or checkout processes.
 
----
+![Demo](./assets/demo.gif)
 
-## 💡 Why this project?
+## Key Features
+- 🧭 Multi-step navigation using **Navigation Compose**
+- 🧠 State management via **ViewModel** and **StateFlow**
+- ✅ Input validation with modular use cases (e.g. Luhn algorithm for card number)
+- 🧩 Separation of concerns and reusable UI components
+- ✨ Animated transitions between form steps
 
-When building modern Android apps, one common pattern is handling user input across multiple screens. 
-This project shows how I structure and reason about:
+## Tech Stack
+- **Kotlin**
+- **Jetpack Compose**
+- **Navigation Compose**
+- **StateFlow**
+- **Hilt** (for Dependency Injection)
+- **Validator Usecases**
+- **CI/CD** with GitHub Actions
 
-- State shared across steps
-- Safe navigation between screens
-- Input validation per step
-- Clean MVVM with Compose
-- UI animations for smooth UX
+## Architecture Overview
+- ViewModel manages step-specific UI state
+- Each screen is a Composable, driven by state
+- Validation logic encapsulated in use-case classes
+- UI and business logic clearly separated
 
----
+## Testing & Extensibility
+This project emphasizes clean architecture, making it easy to:
+- Add new steps to the form
+- Inject new validation rules
+- Reuse components in different contexts
 
-## 🚀 Features
+## Getting Started
+1. Clone the repository
+2. Open in Android Studio
+3. Sync Gradle and Run the app on an emulator or device
 
-- Jetpack Compose UI
-- Multi-step form with:
-    - Step 1: Name + Email (with validation)
-    - Step 2: Preferences (radio + checkbox)
-    - Step 3: Summary and confirmation
-- ViewModel holding centralized form state
-- Navigation controlled by state validity
-- `AnimatedContent` transitions between steps
-- Modular folder structure
-- Ready for testing, CI and future extension
-
----
-
-## 🛠️ Tech Stack
-
-- Kotlin
-- Jetpack Compose
-- Navigation Compose
-- State management with `StateFlow`
-- Hilt for DI
-- `AnimatedContent` for transitions
-- (Planned) GitHub Actions for CI
-
----
-
-## 📁 Structure
-
-```text
-app/
- └── ui/
-      ├── navigation/
-      ├── screens/
-      │    ├── step1/
-      │    ├── step2/
-      │    ├── step3/
-      │    └── result/
-      └── theme/
- └── FormViewModel.kt
-```
-
-## 🧪 Coming soon
-- Unit tests for validation logic
-- CI with GitHub Actions 
-- Local data persistence (Room or DataStore)
-
-##  🧠 Design Decisions
-- State is centralized in one ViewModel
-- Steps update their part of the state
-- Navigation is not allowed unless the step is valid
-- UI logic stays in Compose, business logic in ViewModel
-
-##  🧰 Setup
-- Clone this repo
-- Open in Android Studio
-- Run the app
-
-## 📌 License
-MIT — free to use and modify.
+## License
+This project is licensed under the MIT License. See LICENSE for details.
