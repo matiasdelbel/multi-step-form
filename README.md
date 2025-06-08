@@ -1,79 +1,54 @@
-# 🧾 Android Multi-Step Form with Jetpack Compose
+# 💳 Android Multi-Step Form with Jetpack Compose
 A simple multi-step form built with Jetpack Compose and modern Android architecture practices.  
 Designed to demonstrate clean state management, Compose navigation, and UI animations between steps.
 
----
+> ⚙️ **Personal Portfolio Project — Clean Compose Architecture, State Management, and Form Flows**
 
-## 💡 Why this project?
+// TODO add demo gif
+![Demo](demo.gif)
 
-When building modern Android apps, one common pattern is handling user input across multiple screens. 
+## 🎯 Why this project?
+When building modern Android apps, one common pattern is handling user input across multiple screens.
 This project shows how I structure and reason about:
+- Multi-step Compose navigation
+- Clean ViewModel state management (StateFlow)
+- Form validation logic (Luhn algorithm)
+- Scalable state modeling
+- Separation of concerns
 
-- State shared across steps
-- Safe navigation between screens
-- Input validation per step
-- Clean MVVM with Compose
-- UI animations for smooth UX
-
----
-
-## 🚀 Features
-
-- Jetpack Compose UI
-- Multi-step form with:
-    - Step 1: Name + Email (with validation)
-    - Step 2: Preferences (radio + checkbox)
-    - Step 3: Summary and confirmation
-- ViewModel holding centralized form state
-- Navigation controlled by state validity
-- `AnimatedContent` transitions between steps
-- Modular folder structure
-- Ready for testing, CI and future extension
-
----
-
-## 🛠️ Tech Stack
-
+## Tech Stack
 - Kotlin
 - Jetpack Compose
 - Navigation Compose
-- State management with `StateFlow`
-- Hilt for DI
-- `AnimatedContent` for transitions
-- (Planned) GitHub Actions for CI
+- StateFlow
+- Hilt
+- Validator Usecases
+- CI: GitHub Actions
 
----
-
-## 📁 Structure
-
-```text
-app/
- └── ui/
-      ├── navigation/
-      ├── screens/
-      │    ├── step1/
-      │    ├── step2/
-      │    ├── step3/
-      │    └── result/
-      └── theme/
- └── FormViewModel.kt
+## Architecture Diagram
+```yml 
+NavHost --> ViewModels --> StateFlow --> Validators --> Screens
 ```
 
-## 🧪 Coming soon
-- Unit tests for validation logic
-- CI with GitHub Actions 
-- Local data persistence (Room or DataStore)
+# Architecture
 
-##  🧠 Design Decisions
-- State is centralized in one ViewModel
-- Steps update their part of the state
-- Navigation is not allowed unless the step is valid
-- UI logic stays in Compose, business logic in ViewModel
+- ViewModel only manages state and business logic.
+- Validators return `ValidationError` sealed classes.
+- UI layer maps errors to localized strings.
+- InputField holds both `TextFieldValue` and validation error.
+- Navigation extracted to dedicated functions for scalability.
 
-##  🧰 Setup
-- Clone this repo
-- Open in Android Studio
-- Run the app
+## Testing
+You can use the following credit card numbers in order to test the form:
+- American Express	3714 4963 5398 431
+- Visa	4871 0499 9999 9910
+- Visa	4111 1111 1111 1111
+- Mastercard	5454 5454 5454 5454
 
-## 📌 License
+## Setup
+1. Clone repo
+2. Open in Android Studio
+3. Run
+
+## License
 MIT — free to use and modify.
