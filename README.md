@@ -1,4 +1,6 @@
 # 💳 Android Multi-Step Form with Jetpack Compose
+[![Build & Test Android App](https://github.com/matiasdelbel/multi-step-form/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/matiasdelbel/multi-step-form/actions/workflows/build-and-test.yml)
+
 A polished multi-step form built using **Jetpack Compose**, following best practices in modern 
 Android development. This project demonstrates smooth screen transitions, robust state handling, 
 and modular validation — ideal for form-heavy user flows such as onboarding or checkout processes.
