@@ -2,6 +2,8 @@
 hilt = "2.56.2"
 kotlin = "2.1.21"
 
+roborazzi="1.42.0"
+
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version = "1.10.1" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version = "1.16.0" }
@@ -26,6 +28,11 @@ hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", ve
 
 junit = { module = "junit:junit", version = "4.13.2" }
 
+preview-scanner-compose = { module = "io.github.sergio-sastre.ComposablePreviewScanner:android", version = "0.5.1" }
+preview-scanner-roborazzi = { module = "io.github.takahirom.roborazzi:roborazzi-compose-preview-scanner-support", version.ref = "roborazzi" }
+
+robolectric = { module = "org.robolectric:robolectric", version = "4.14.1" }
+
 [plugins]
 android-application = { id = "com.android.application", version = "8.9.3" }
 
@@ -35,3 +42,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 ksp = { id = "com.google.devtools.ksp", version = "2.1.21-2.0.2" }
+
+roborazzi = {id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }

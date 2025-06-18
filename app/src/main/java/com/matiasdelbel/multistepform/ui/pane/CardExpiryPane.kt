@@ -126,9 +126,9 @@ private class ExpiryDateVisualTransformation : VisualTransformation {
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun CardExpiryPanePreview() {
+internal fun CardExpiryPanePreview() {
     AppTheme {
         Column {
             CardExpiryPane(

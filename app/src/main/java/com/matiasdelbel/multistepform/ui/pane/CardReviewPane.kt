@@ -50,9 +50,9 @@ fun CardReviewPane(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun CardReviewPanePreview() {
+internal fun CardReviewPanePreview() {
     AppTheme {
         CardReviewPane(
             cardNumber = "**** **** **** 3443",

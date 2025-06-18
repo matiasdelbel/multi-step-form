@@ -22,9 +22,9 @@ fun TextFieldError(
     )
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun TextFieldErrorPreview() {
+internal fun TextFieldErrorPreview() {
     AppTheme {
         TextFieldError(text = "TextField error")
     }

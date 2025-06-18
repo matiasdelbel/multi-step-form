@@ -84,9 +84,9 @@ fun CreditCard(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-fun CreditCardPreview() {
+internal fun CreditCardPreview() {
     AppTheme {
         CreditCard(
             cardNumber = "**** **** **** 3443",

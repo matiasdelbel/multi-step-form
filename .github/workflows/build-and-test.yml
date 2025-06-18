@@ -3,10 +3,7 @@ name: Build & Test Android App
 on:
   push:
     branches:
-      - '**'
-  pull_request:
-    branches:
-      - '**'
+      - 'main'
 
 jobs:
   build:
@@ -14,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
@@ -23,11 +20,13 @@ jobs:
           distribution: 'temurin'
           java-version: 17
 
-      - name: Set up Gradle cache
-        uses: gradle/actions/setup-gradle@v3
-
-      - name: Grant execute permission to Gradle wrapper
-        run: chmod +x ./gradlew
+      - name: Cache Gradle
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
 
       - name: Build app
         run: ./gradlew assembleDebug

@@ -29,9 +29,9 @@ fun NavButtons(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun NavButtonsPreview() {
+internal fun NavButtonsPreview() {
     AppTheme {
         NavButtons(
             next = { Button(text = "Next", onClick = {}) },

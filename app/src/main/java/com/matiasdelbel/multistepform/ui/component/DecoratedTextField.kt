@@ -32,9 +32,9 @@ fun DecoratedTextField(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-fun DecoratedTextFieldPreview() {
+internal fun DecoratedTextFieldPreview() {
     AppTheme {
         Column {
             DecoratedTextField(

@@ -32,7 +32,8 @@ fun TextButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
 ) {
-    TextButton(onClick = onClick,
+    TextButton(
+        onClick = onClick,
         modifier = modifier,
         enabled = enabled,
     ) {
@@ -40,9 +41,9 @@ fun TextButton(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun ButtonPreview() {
+internal fun ButtonPreview() {
     AppTheme {
         Column {
             Button(text = "Button", onClick = { })
