@@ -21,9 +21,9 @@ fun TextFieldHelperText(
     )
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun TextFieldHelperTextPreview() {
+internal fun TextFieldHelperTextPreview() {
     AppTheme {
         TextFieldHelperText(text = "TextField helper text")
     }

@@ -138,9 +138,9 @@ class CardNumberVisualTransformation(private val mask: String) : VisualTransform
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun CardNumberPanePreview() {
+internal fun CardNumberPanePreview() {
     AppTheme {
         Column {
             CardNumberPane(

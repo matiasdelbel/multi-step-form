@@ -19,9 +19,9 @@ fun TextFieldLabel(
     )
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun TextFieldPreview() {
+internal fun TextFieldPreview() {
     AppTheme {
         TextFieldLabel(text = "TextField label")
     }

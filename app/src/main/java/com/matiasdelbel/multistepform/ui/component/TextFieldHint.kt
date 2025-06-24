@@ -19,9 +19,9 @@ fun TextFieldHint(
     )
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun TextFieldHintPreview() {
+internal fun TextFieldHintPreview() {
     AppTheme {
         TextFieldHint(text = "TextField hint")
     }

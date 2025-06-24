@@ -81,9 +81,9 @@ fun SecurityPane(
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
-private fun SecurityPanePreview() {
+internal fun SecurityPanePreview() {
     AppTheme {
         Column {
             SecurityPane(
